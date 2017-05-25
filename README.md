@@ -4,6 +4,10 @@ A barcode scanner example for Android using Hyperloop
 
 ![image](screen.png)
 
+## Used library:
+* https://github.com/dm77/barcodescanner
+* https://github.com/zxing/zxing (zxing core)
+
 ## Features:
 * setFlash(true/false);
 * getFlash();
