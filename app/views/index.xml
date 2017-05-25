@@ -1,0 +1,9 @@
+<Alloy>
+	<Window class="container">
+		<Button id="btn_start" title="Scan"/>
+		<Button id="btn_stop" title="Stop Scan"/>
+		<Button id="btn_flash" title="Flash"/>
+		<Label id="lbl"/>
+		<View id="view_cam"/>
+	</Window>
+</Alloy>

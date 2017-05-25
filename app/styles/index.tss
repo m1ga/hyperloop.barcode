@@ -1,0 +1,31 @@
+"Window" : {
+	backgroundColor: "white"
+}
+"#label" : {
+	font: {
+		fontSize: 12
+	}
+}
+"#view_cam" : {
+	top: 0,
+	height: "50%",
+	left: 0,
+	right: 0
+}
+"#lbl" : {
+	bottom: 50,
+	height: Ti.UI.SIZE,
+	color: "#000",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+"#btn_start" : {
+	bottom: 0,
+	left:0
+}
+"#btn_stop" : {
+	bottom: 0
+}
+"#btn_flash" : {
+	bottom: 0,
+	right:0
+}
