@@ -16,6 +16,8 @@ A barcode scanner example for Android using Hyperloop
 * resume();
 * stopCamera();
 * getView();
+* hasCameraPermissions();
+* requestCameraPermissions(callback(true/false));
 
 
 ## Example:
@@ -33,8 +35,19 @@ scanner.result(function(result) {
 })
 
 $.btn_start.addEventListener("click", function(e) {
-	scanner.startCamera(whichCam);
+	if (scanner.hasCameraPermissions()) {
+		scanner.startCamera(whichCam);
+	} else {
+		scanner.requestCameraPermissions(function(val){
+			if (val){
+				scanner.startCamera(whichCam);
+			} else {
+				alert("Permissions needed");
+			}
+		});
+	}
 });
+
 $.btn_stop.addEventListener("click", function(e) {
 	scanner.stopCamera();
 
@@ -50,7 +63,7 @@ $.btn_flash.addEventListener("click", function(e) {
 
 $.index.addEventListener("open", function(e) {
 
-})
+});
 $.view_cam.add(scanner.getView());
 $.index.open();
 ```
